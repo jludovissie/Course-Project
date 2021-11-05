@@ -12,10 +12,11 @@ import { ShoppinglistComponent } from './shoppinglist/shoppinglist.component'
 const appRoutes: Routes = [
   {path: '', redirectTo: '/recipes' , pathMatch: 'full' }, 
   {path: 'recipes', component: RecipeComponent, children: [
-    {path: '', component: RecipeStartComponent},
-    {path: 'new', component: RecipeeditComponent}, 
+    {path: '', component: RecipeStartComponent}, 
+    {path:'new' , component: RecipeeditComponent} ,
     {path: ':id', component: RecipedetailComponent} ,
     {path: ':id/edit', component: RecipeeditComponent}
+  
   ] } ,
   {path: 'shoppinglist' , component: ShoppinglistComponent }
 ] ;
